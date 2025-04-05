@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="multiplier-label" id="multiplier-label"></div>
+
+  <div class="game-container">
+    <h1>Clicker Game</h1>
+    <div class="scoreboard">Clicks: <span id="score">0</span></div>
+    <button id="click-button">Click Me!</button>
+
+    <div class="shop">
+      <h2>Shop</h2>
+      <button id="2x-potion">2X Potion<br>(300 clicks)</button>
+      <button id="5x-potion">5X Potion<br>(1k clicks)</button>
+      <button id="15x-potion">15X Potion<br>(10k clicks)</button>
+      <button id="buy-emerald">Buy Winner Emerald<br>(100k clicks)</button>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+  <audio id="buy-sound" src="buy.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="win.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

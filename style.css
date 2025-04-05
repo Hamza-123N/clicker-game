@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .multiplier-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff0;
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff0;
+    display: none;
+    z-index: 10;
+  }
+  
+  .game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  #click-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #00ffcc;
+    color: #000;
+    box-shadow: 0 0 20px #00ffcc;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    animation: glow 1s infinite alternate;
+  }
+  
+  #click-button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 10px #00ffcc; }
+    to { box-shadow: 0 0 30px #00ffcc; }
+  }
+  
+  .scoreboard {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .shop {
+    margin-top: 30px;
+  }
+  
+  .shop button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .shop button:hover {
+    background-color: #e68900;
+  }
+  
+  #win-message {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #00ffcc;
+    font-weight: bold;
+  }
+
+  /* WIN ANIMATION CONTAINER */
+.win-animation {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  /* SPARKLES */
+  .sparkle {
+    position: absolute;
+    bottom: -10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: rise 3s linear infinite;
+  }
+  
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  /* EMERALD FALL */
+  .emerald {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Emerald_gem_icon.svg/1024px-Emerald_gem_icon.svg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 15px limegreen);
+    animation: dropEmerald 4s ease-in-out forwards;
+    z-index: 10;
+  }
+  
+  @keyframes dropEmerald {
+    0% {
+      transform: translateX(-50%) translateY(-200px) scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(60vh) scale(1);
+      opacity: 1;
+    }
+  }
+  
